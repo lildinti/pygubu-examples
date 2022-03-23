@@ -1,3 +1,4 @@
 # pygubu-examples
 
-These exmples are based on my experience with pygubu and pygubu-designer. 
+This is a simple text editor app that uses a .ui file created with pygubu-designer
+as the GUI and implements the vasic functions of e text editor. 
