@@ -48,6 +48,7 @@ class TextpadApp:
         self.textEdit.focus_set()
     
     def open_clicked(self):
+        # Select file to open
         self.fileName = fd.askopenfilename()
         if self.fileName:
             base = pathlib.Path(self.fileName + "").name
