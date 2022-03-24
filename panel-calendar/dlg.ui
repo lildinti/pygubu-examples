@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface version="1.1">
+  <object class="tk.Toplevel" id="mainwindow">
+    <property name="geometry">280x150</property>
+    <property name="height">200</property>
+    <property name="title" translatable="yes">Date pick with dialog example</property>
+    <property name="width">200</property>
+    <child>
+      <object class="ttk.Frame" id="mainframe">
+        <property name="height">200</property>
+        <property name="width">200</property>
+        <layout manager="pack">
+          <property name="expand">true</property>
+          <property name="side">top</property>
+        </layout>
+        <child>
+          <object class="ttk.Button" id="button2">
+            <property name="command" type="command" cbtype="simple">toggle_calendar</property>
+            <property name="image">Calendar.png</property>
+            <property name="style">Toolbutton</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="row">0</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Label" id="lbl_date">
+            <property name="text" translatable="yes">Pick a date</property>
+            <layout manager="grid">
+              <property name="column">1</property>
+              <property name="padx">5</property>
+              <property name="row">0</property>
+            </layout>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="pygubu.builder.widgets.dialog" id="dialog1">
+    <property name="height">100</property>
+    <property name="modal">true</property>
+    <property name="width">200</property>
+    <bind sequence="&lt;&lt;DialogClose&gt;&gt;" handler="on_dialog_close_event" add="" />
+    <child>
+      <object class="ttk.Frame" id="dlg_mainframe">
+        <property name="height">200</property>
+        <property name="padding">5</property>
+        <property name="width">200</property>
+        <layout manager="pack">
+          <property name="expand">true</property>
+          <property name="fill">both</property>
+          <property name="side">top</property>
+        </layout>
+        <child>
+          <object class="pygubu.builder.widgets.calendarframe" id="fcalendar">
+            <property name="firstweekday">6</property>
+            <property name="month">1</property>
+            <bind sequence="&lt;&lt;CalendarFrameDateSelected&gt;&gt;" handler="on_date_selected" add="" />
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="row">0</property>
+              <property name="sticky">nsew</property>
+            </layout>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
