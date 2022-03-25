@@ -69,22 +69,22 @@ class TextpadApp:
             self.textEdit.focus_set()
 
     def copy_clicked(self):
-        self.mainwindow.clipboard_clear()
-        if self.textEdit.tag_ranges(tk.SEL):
-            self.mainwindow.clipboard_append(self.textEdit.get(tk.SEL_FIRST,tk.SEL_LAST))
+        selection = self.textEdit.tag_ranges(tk.SEL)
+        if selection:
+            self.mainwindow.clipboard_clear()
+            self.mainwindow.clipboard_append(self.textEdit.get(*selection))
         self.textEdit.focus_set()
 
     def cut_clicked(self):
-        if self.textEdit.tag_ranges(tk.SEL):
+        selection = self.textEdit.tag_ranges(tk.SEL)
+        if selection:
             self.mainwindow.clipboard_clear()
-            self.mainwindow.clipboard_append(self.textEdit.get(tk.SEL_FIRST,tk.SEL_LAST))
-            self.textEdit.delete(tk.SEL_FIRST,tk.SEL_LAST)
-        else:
-            self.textEdit.delete("0.0",tk.END)
+            self.mainwindow.clipboard_append(self.textEdit.get(*selection))
+            self.textEdit.delete(*selection)
         self.textEdit.focus_set()
         
     def paste_clicked(self):
-        self.textEdit.insert(tk.END, self.mainwindow.clipboard_get())
+        self.textEdit.insert(tk.INSERT, self.mainwindow.clipboard_get())
         self.textEdit.focus_set()
 
     def undo_clicked(self):
