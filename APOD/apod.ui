@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface version="1.1">
+  <object class="tk.Toplevel" id="toplevel1">
+    <property name="geometry">360x720</property>
+    <property name="height">200</property>
+    <property name="resizable">none</property>
+    <property name="title" translatable="yes">NASA - APOD</property>
+    <property name="width">200</property>
+    <child>
+      <object class="ttk.Frame" id="frame1">
+        <property name="height">200</property>
+        <property name="width">200</property>
+        <layout manager="pack">
+          <property name="padx">5</property>
+          <property name="pady">10</property>
+          <property name="propagate">True</property>
+          <property name="side">top</property>
+        </layout>
+        <child>
+          <object class="ttk.Entry" id="entry1">
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="padx">5</property>
+              <property name="propagate">True</property>
+              <property name="row">0</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Button" id="button1">
+            <property name="command" type="command" cbtype="simple">submit_clicked</property>
+            <property name="image">submit.png</property>
+            <property name="style">Toolbutton</property>
+            <property name="text" translatable="yes">S</property>
+            <layout manager="grid">
+              <property name="column">1</property>
+              <property name="propagate">True</property>
+              <property name="row">0</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Button" id="button2">
+            <property name="command" type="command" cbtype="simple">fullscreen_clicked</property>
+            <property name="image">full-screen.png</property>
+            <property name="style">Toolbutton</property>
+            <property name="text" translatable="yes">F</property>
+            <layout manager="grid">
+              <property name="column">3</property>
+              <property name="propagate">True</property>
+              <property name="row">0</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Button" id="button3">
+            <property name="command" type="command" cbtype="simple">about_clicked</property>
+            <property name="image">info.png</property>
+            <property name="style">Toolbutton</property>
+            <property name="text" translatable="yes">H</property>
+            <layout manager="grid">
+              <property name="column">4</property>
+              <property name="padx">10</property>
+              <property name="propagate">True</property>
+              <property name="row">0</property>
+              <property name="sticky">e</property>
+            </layout>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="label1">
+        <property name="font">TkCaptionFont</property>
+        <property name="text" translatable="yes">Title</property>
+        <property name="textvariable">string:strTitle</property>
+        <layout manager="pack">
+          <property name="anchor">w</property>
+          <property name="padx">10</property>
+          <property name="pady">10</property>
+          <property name="propagate">True</property>
+          <property name="side">top</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="label2">
+        <property name="text" translatable="yes">Date</property>
+        <property name="textvariable">string:strDate</property>
+        <layout manager="pack">
+          <property name="anchor">w</property>
+          <property name="padx">10</property>
+          <property name="propagate">True</property>
+          <property name="side">top</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="label3">
+        <property name="text" translatable="yes">Copyright</property>
+        <property name="textvariable">string:strCopyright</property>
+        <layout manager="pack">
+          <property name="anchor">w</property>
+          <property name="padx">10</property>
+          <property name="pady">10</property>
+          <property name="propagate">True</property>
+          <property name="side">top</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="label4">
+        <layout manager="pack">
+          <property name="anchor">center</property>
+          <property name="padx">10</property>
+          <property name="pady">10</property>
+          <property name="propagate">True</property>
+          <property name="side">top</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="pygubu.builder.widgets.scrollbarhelper" id="scrollbarhelper1">
+        <property name="scrolltype">both</property>
+        <property name="usemousewheel">false</property>
+        <layout manager="pack">
+          <property name="expand">true</property>
+          <property name="fill">y</property>
+          <property name="padx">10</property>
+          <property name="pady">10</property>
+          <property name="propagate">True</property>
+          <property name="side">top</property>
+        </layout>
+        <child>
+          <object class="tk.Text" id="text1">
+            <property name="height">10</property>
+            <property name="width">50</property>
+            <property name="wrap">word</property>
+            <layout manager="pack">
+              <property name="propagate">True</property>
+              <property name="side">top</property>
+            </layout>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
