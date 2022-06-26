@@ -1,0 +1,244 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface version="1.2">
+  <object class="tk.Toplevel" id="toplevel1">
+    <property name="background">#eaeaea</property>
+    <property name="geometry">310x200</property>
+    <property name="height">200</property>
+    <property name="padx">0</property>
+    <property name="pady">0</property>
+    <property name="resizable">none</property>
+    <property name="title" translatable="yes">Calculator</property>
+    <property name="width">200</property>
+    <child>
+      <object class="ttk.Frame" id="frame2">
+        <property name="height">200</property>
+        <property name="width">200</property>
+        <layout manager="pack">
+          <property name="expand">true</property>
+          <property name="fill">both</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="side">top</property>
+        </layout>
+        <child>
+          <object class="ttk.Label" id="lblEquation">
+            <property name="anchor">e</property>
+            <property name="background">#797979</property>
+            <property name="font">{arial} 36 {}</property>
+            <property name="foreground">#feffff</property>
+            <property name="text" translatable="yes" />
+            <property name="textvariable">string:equation</property>
+            <property name="width">14</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="columnspan">5</property>
+              <property name="padx">2</property>
+              <property name="pady">2</property>
+              <property name="row">0</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Button" id="button7">
+            <property name="command" type="command" cbtype="with_wid">press_key</property>
+            <property name="text" translatable="yes">7</property>
+            <property name="width">2</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="row">1</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Button" id="buttonmin">
+            <property name="command" type="command" cbtype="with_wid">press_key</property>
+            <property name="text" translatable="yes">-</property>
+            <property name="width">4</property>
+            <layout manager="grid">
+              <property name="column">3</property>
+              <property name="row">1</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Button" id="buttonmult">
+            <property name="command" type="command" cbtype="with_wid">press_key</property>
+            <property name="text" translatable="yes">*</property>
+            <property name="width">4</property>
+            <layout manager="grid">
+              <property name="column">4</property>
+              <property name="row">1</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Button" id="button8">
+            <property name="command" type="command" cbtype="with_wid">press_key</property>
+            <property name="text" translatable="yes">8</property>
+            <property name="width">2</property>
+            <layout manager="grid">
+              <property name="column">1</property>
+              <property name="row">1</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Button" id="button9">
+            <property name="command" type="command" cbtype="with_wid">press_key</property>
+            <property name="text" translatable="yes">9</property>
+            <property name="width">2</property>
+            <layout manager="grid">
+              <property name="column">2</property>
+              <property name="row">1</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Button" id="button4">
+            <property name="command" type="command" cbtype="with_wid">press_key</property>
+            <property name="text" translatable="yes">4</property>
+            <property name="width">2</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="row">2</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Button" id="button5">
+            <property name="command" type="command" cbtype="with_wid">press_key</property>
+            <property name="text" translatable="yes">5</property>
+            <property name="width">2</property>
+            <layout manager="grid">
+              <property name="column">1</property>
+              <property name="row">2</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Button" id="button6">
+            <property name="command" type="command" cbtype="with_wid">press_key</property>
+            <property name="text" translatable="yes">6</property>
+            <property name="width">2</property>
+            <layout manager="grid">
+              <property name="column">2</property>
+              <property name="row">2</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Button" id="button1">
+            <property name="command" type="command" cbtype="with_wid">press_key</property>
+            <property name="text" translatable="yes">1</property>
+            <property name="width">2</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="row">3</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Button" id="button2">
+            <property name="command" type="command" cbtype="with_wid">press_key</property>
+            <property name="text" translatable="yes">2</property>
+            <property name="width">2</property>
+            <layout manager="grid">
+              <property name="column">1</property>
+              <property name="row">3</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Button" id="button3">
+            <property name="command" type="command" cbtype="with_wid">press_key</property>
+            <property name="text" translatable="yes">3</property>
+            <property name="width">2</property>
+            <layout manager="grid">
+              <property name="column">2</property>
+              <property name="row">3</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Button" id="button0">
+            <property name="command" type="command" cbtype="with_wid">press_key</property>
+            <property name="text" translatable="yes">0</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="columnspan">2</property>
+              <property name="row">4</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Button" id="buttonplus">
+            <property name="command" type="command" cbtype="with_wid">press_key</property>
+            <property name="text" translatable="yes">+</property>
+            <property name="width">4</property>
+            <layout manager="grid">
+              <property name="column">3</property>
+              <property name="row">2</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Button" id="buttondiv">
+            <property name="command" type="command" cbtype="with_wid">press_key</property>
+            <property name="text" translatable="yes">/</property>
+            <property name="width">4</property>
+            <layout manager="grid">
+              <property name="column">4</property>
+              <property name="row">2</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Button" id="buttondec">
+            <property name="command" type="command" cbtype="with_wid">press_key</property>
+            <property name="text" translatable="yes">.</property>
+            <property name="width">2</property>
+            <layout manager="grid">
+              <property name="column">2</property>
+              <property name="row">4</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Button" id="button30">
+            <property name="command" type="command" cbtype="simple">clear</property>
+            <property name="text" translatable="yes">C</property>
+            <property name="width">4</property>
+            <layout manager="grid">
+              <property name="column">3</property>
+              <property name="row">3</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Button" id="button31">
+            <property name="command" type="command" cbtype="simple">clear_all</property>
+            <property name="text" translatable="yes">AC</property>
+            <property name="width">4</property>
+            <layout manager="grid">
+              <property name="column">3</property>
+              <property name="row">4</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Button" id="button32">
+            <property name="command" type="command" cbtype="simple">resolve</property>
+            <property name="text" translatable="yes">=</property>
+            <property name="width">4</property>
+            <layout manager="grid">
+              <property name="column">4</property>
+              <property name="ipady">15</property>
+              <property name="row">3</property>
+              <property name="rowspan">2</property>
+            </layout>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
