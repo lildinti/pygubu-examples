@@ -29,6 +29,8 @@ class ApodApp:
         builder.import_variables(self, ['strTitle', 'strDate', 'strCopyright'])
 
         # Add tooltips to butttons
+        entryTip = Hovertip(self.builder.get_object('entr1'),
+            'Enter date as YYYY-mm-dd')
         submitTip = Hovertip(self.builder.get_object(
             'button1'), "Get date's picture")
         fullimgTip = Hovertip(self.builder.get_object(
