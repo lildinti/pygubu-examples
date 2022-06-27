@@ -107,7 +107,7 @@ class ApodApp:
         if 'response' in globals():
             top = tk.Toplevel()
             top.title('Full APOD Photo')
-            top.iconbitmap('rocket.ico')
+            
 
             # Load the full image to the new window
             img_label = tk.Label(top, image=full_img)
