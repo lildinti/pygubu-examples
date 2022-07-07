@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface version="1.2">
+  <object class="tk.Toplevel" id="toplevel1">
+    <property name="geometry">480x320</property>
+    <property name="height">200</property>
+    <property name="resizable">none</property>
+    <property name="title" translatable="yes">MP3 Player</property>
+    <property name="width">200</property>
+    <child>
+      <object class="ttk.Frame" id="frame1">
+        <property name="height">200</property>
+        <property name="width">200</property>
+        <layout manager="pack">
+          <property name="expand">true</property>
+          <property name="fill">both</property>
+          <property name="side">top</property>
+        </layout>
+        <child>
+          <object class="tk.Listbox" id="song_box">
+            <property name="listvariable">string:playlist</property>
+            <property name="selectmode">single</property>
+            <property name="width">50</property>
+            <layout manager="pack">
+              <property name="pady">15 0</property>
+              <property name="side">top</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Frame" id="contols_frame">
+            <property name="height">200</property>
+            <property name="width">200</property>
+            <layout manager="pack">
+              <property name="pady">20</property>
+              <property name="side">top</property>
+            </layout>
+            <child>
+              <object class="tk.Button" id="back_btn">
+                <property name="borderwidth">0</property>
+                <property name="command" type="command" cbtype="simple">previous_song</property>
+                <property name="image">first.png</property>
+                <property name="takefocus">true</property>
+                <property name="text" translatable="yes">button1</property>
+                <layout manager="grid">
+                  <property name="column">0</property>
+                  <property name="padx">3 0</property>
+                  <property name="row">0</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="tk.Button" id="play_btn">
+                <property name="borderwidth">0</property>
+                <property name="command" type="command" cbtype="simple">play_song</property>
+                <property name="image">play.png</property>
+                <property name="text" translatable="yes">button2</property>
+                <layout manager="grid">
+                  <property name="column">1</property>
+                  <property name="padx">3 0</property>
+                  <property name="row">0</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="tk.Button" id="pause_btn">
+                <property name="borderwidth">0</property>
+                <property name="command" type="command" cbtype="simple">pause_song</property>
+                <property name="image">pause.png</property>
+                <property name="text" translatable="yes">button3</property>
+                <layout manager="grid">
+                  <property name="column">2</property>
+                  <property name="padx">3 0</property>
+                  <property name="row">0</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="tk.Button" id="stop_btn">
+                <property name="borderwidth">0</property>
+                <property name="command" type="command" cbtype="simple">stop_song</property>
+                <property name="image">stop.png</property>
+                <property name="text" translatable="yes">button4</property>
+                <layout manager="grid">
+                  <property name="column">3</property>
+                  <property name="padx">3 0</property>
+                  <property name="row">0</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="tk.Button" id="forward_btn">
+                <property name="borderwidth">0</property>
+                <property name="command" type="command" cbtype="simple">next_song</property>
+                <property name="image">last.png</property>
+                <property name="text" translatable="yes">button5</property>
+                <layout manager="grid">
+                  <property name="column">4</property>
+                  <property name="padx">3 0</property>
+                  <property name="row">0</property>
+                </layout>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="tk.Menu" id="menu1">
+    <child>
+      <object class="tk.Menuitem.Submenu" id="submenu1">
+        <property name="label" translatable="yes">Add Songs</property>
+        <child>
+          <object class="tk.Menuitem.Command" id="command1">
+            <property name="command" type="command" cbtype="simple">add_song</property>
+            <property name="label" translatable="yes">Add Song</property>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Menuitem.Command" id="command2">
+            <property name="command" type="command" cbtype="simple">add_multiple_songs</property>
+            <property name="label" translatable="yes">Add Many Songs</property>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Menuitem.Submenu" id="submenu2">
+        <property name="label" translatable="yes">Delete Songs</property>
+        <child>
+          <object class="tk.Menuitem.Command" id="command3">
+            <property name="command" type="command" cbtype="simple">delete_song</property>
+            <property name="label" translatable="yes">Delete Song</property>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Menuitem.Command" id="command4">
+            <property name="command" type="command" cbtype="simple">delete_all_songs</property>
+            <property name="label" translatable="yes">Delete All Songs</property>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
